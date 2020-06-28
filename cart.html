@@ -1,3 +1,9 @@
+<?php
+	include_once('connectionDB.php');
+	$query="SELECT imagen,nombre, tipo, precioUnitario FROM platillo;"
+	$result=mysql_query($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,18 +38,15 @@
 		  </nav>
 	</header>
 
-	<h2>Título 1 para ejemplo</h2>
+	<h2>Agregados al carrito <img src="img/carrito.png" alt="Cart" width="100px" height="100px"></h2>
 	<br>
-	<img src="img/plato-a.jpg" width="1024px" height="768px" >
-	<br>
-	Aquí va una tabla, ALV!
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th scope="col">imagen</th>
+				<th scope="col">Imagen</th>
 				<th scope="col">Nombre</th>
-				<th scope="col">cantidad</th>
-				<th scope="col">precio</th>
+				<th scope="col">Tipo</th>
+				<th scope="col">Precio</th>
 			</tr>
 		</thead>
 		<tbody>
