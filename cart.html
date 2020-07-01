@@ -1,23 +1,17 @@
-<?php
-	include_once('connectionDB.php');
-	$query="SELECT imagen,nombre, tipo, precioUnitario FROM platillo;"
-	$result=mysql_query($query);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/cartcss.css">
+    <link rel="stylesheet" href="css/indexcss.css">
 	<title>Carrito | Tiempo de Restaurant</title>
 </head>
 <body>
-	<header>
+	<header class="header-principal">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			<a href="index.html">
-				<img src="img/logo.png" alt="Tiempo de Restaruante Logo" width="42px" height="42px">
+				<img src="img/logo.png" alt="Tiempo de Restaruante Logo" class="logo">
 			</a>
 			<a class="navbar-brand" href="index.html">Tiempo de Restaurant</a>
 			<button class="navbar-toggler" type="button" data-toggle="csollapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,40 +34,69 @@
 
 	<h2>Agregados al carrito <img src="img/carrito.png" alt="Cart" width="100px" height="100px"></h2>
 	<br>
-	<table class="table table-hover">
-		<thead>
-			<tr>
-				<th scope="col">Imagen</th>
-				<th scope="col">Nombre</th>
-				<th scope="col">Tipo</th>
-				<th scope="col">Precio</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class="table-active">
-				<th scope>Imagen</th>
-				<td>Nombre</td>
-				<td>Cantidad</td>
-				<td>Precio</td>
-			</tr>
-		</tbody>
-	</table>
-</body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<footer>
-	<div clas="navbar">
-		<h2><strong>FOOTER</strong></h2>
-		<a href="#">Acerca de...</a>
-		<a href="#">Redes Sociales</a>
-		<a href="#">Terminos y condicines</a>
+	<div class="cuerpo">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Imagen</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Tipo</th>
+					<th scope="col">Precio</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="table-active">
+					<!Aquí van los querys del sistema>
+					<td>  
+						<img style="height: 100px; width: 50%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="">
+					</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr class="table-primary">
+					<td>  
+						<img style="height: 100px; width: 50%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="">
+					</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-</footer>
+	<div class="botones">
+		<center>
+		<button type="button" class="btn btn-outline-secondary">
+			<a href="ticket.html">
+				Generar ticket
+			</a>
+		</button>
+		<button type="button" class="btn btn-outline-secondary">
+			<a href="#">
+				Volver a menú
+			</a>
+		</button>
+		</center>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer>
+		<dir class="fondo-footer">
+			<ul class="lista-contactos">
+				<li>
+					<a href="#">Acerca de</a>
+				</li>
+				<li>
+					<a href="#">Redes sociales</a>
+				</li>
+				<li>
+					<a href="#">Terminos y condiciones</a>
+				</li>
+			</ul>
+		</dir>
+	</footer>
+</body>
 </html>
